@@ -7,9 +7,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Convert;
-import javax.persistence.Entity;
+import javax.persistence.*;
+
 import com.example.appinvoice.entity.template.AbstractEntity;
 
 
@@ -18,7 +17,11 @@ import com.example.appinvoice.entity.template.AbstractEntity;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Customer extends AbstractEntity{
+public class Customer {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     @Column(nullable = false, length = 250)
     private String name;

@@ -15,7 +15,7 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Detail extends AbstractEntity {
+public class Detail {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

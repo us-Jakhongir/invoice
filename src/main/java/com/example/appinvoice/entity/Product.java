@@ -7,10 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 
 @Entity
@@ -18,7 +15,11 @@ import javax.persistence.ManyToOne;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Product extends AbstractEntity {
+public class Product {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     @Column(length = 10)
     private String name;

@@ -7,8 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 
 @Entity
@@ -16,7 +15,11 @@ import javax.persistence.Entity;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Category extends AbstractEntity {
+public class Category {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
     @Column(length = 250)
     private String name;

@@ -16,7 +16,7 @@ import java.util.Date;
 @NoArgsConstructor
 @Getter
 @Setter
-public class Invoice extends AbstractEntity {
+public class Invoice {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

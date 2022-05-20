@@ -13,6 +13,11 @@ public class Response {
     private boolean status;
     private Object object;
 
+    public Response(String message, boolean status) {
+        this.message = message;
+        this.status = status;
+    }
+
     public Response(String message, boolean status, Object object) {
         this.message = message;
         this.status = status;

@@ -16,7 +16,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Table(name = "orders")
-public class Order extends AbstractEntity {
+public class Order {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
